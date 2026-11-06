@@ -5,6 +5,8 @@ import PostShow from "./pages/posts/Show"
 import PostCreate from "./pages/posts/Create";
 import PostEdit from "./pages/posts/Edit";
 
+import { ROUTES } from "./routes/routes";
+
 function App() {
 
   return (
@@ -13,19 +15,19 @@ function App() {
 
         <div className="bg-white py-4 border-b border-gray-200 w-full">
           <div className="w-1/2 mx-auto">
-            <Link to={'/'} className="mr-4">Main</Link>
-            <Link to={'/posts'} className="mr-4">Posts</Link>
+            <Link to={ROUTES.MAIN_INDEX} className="mr-4">Main</Link>
+            <Link to={ROUTES.POST_INDEX} className="mr-4">Posts</Link>
           </div>
         </div>
 
         <div className="bg-gray-50 min-h-screen">
           <div className="w-1/2 mx-auto py-4">
             <Routes>
-              <Route path={'/'} element={<MainIndex />}></Route>
-              <Route path={'/posts'} element={<PostIndex />}></Route>
-              <Route path={'/posts/create'} element={<PostCreate />}></Route>
-              <Route path={'/posts/:id/edit'} element={<PostEdit />}></Route>
-              <Route path={'/posts/:id'} element={<PostShow />}></Route>
+              <Route path={ROUTES.MAIN_INDEX} element={<MainIndex />}></Route>
+              <Route path={ROUTES.POST_INDEX} element={<PostIndex />}></Route>
+              <Route path={ROUTES.POST_CREATE} element={<PostCreate />}></Route>
+              <Route path={ROUTES.POST_EDIT} element={<PostEdit />}></Route>
+              <Route path={ROUTES.POST_SHOW} element={<PostShow />}></Route>
             </Routes>
           </div>
         </div>
