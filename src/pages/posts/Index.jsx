@@ -1,19 +1,17 @@
 import axios from "axios";
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 import { generatePath, Link } from "react-router-dom";
-
 import { ROUTES } from "../../routes/routes";
+import { usePostStore } from '../../store/postStore'
+
+
+
 
 function Index() {
 
-    const [posts, setPosts] = useState([]);
 
-    const getPosts = async () => {
-        const res = await axios.get('http://localhost:3000/posts');
-        setPosts(res.data);
 
-        // console.log
-    };
+    const { getPosts, posts, deletePost } = usePostStore();
 
 
     useEffect(() => {
@@ -21,19 +19,6 @@ function Index() {
         getPosts()
     }, []);
 
-    const deletePost = async (id) => {
-        try {
-            const res = await axios.delete(`http://localhost:3000/posts/${id}`);
-
-            const newPosts = posts.filter(postItem => postItem.id !== id);
-
-            setPosts(newPosts);
-        } catch (e) {
-            console.log(e)
-        }
-
-
-    }
 
     return (
         <div>

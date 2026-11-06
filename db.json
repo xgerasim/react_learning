@@ -11,24 +11,14 @@
       "content": "some context 2"
     },
     {
-      "id": "3",
-      "title": "some title 39",
-      "content": "some context 39"
-    },
-    {
-      "id": "4",
-      "title": "some title 4",
-      "content": "some context 4"
-    },
-    {
-      "title": "1232",
-      "content": "45454",
-      "id": "1ObhcJbU9gk"
-    },
-    {
-      "title": "cool",
+      "title": "cool damn",
       "content": "123",
       "id": "SdHObezDJJ0"
+    },
+    {
+      "title": "12345",
+      "content": "54321",
+      "id": "J7DaLsd6V-0"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
